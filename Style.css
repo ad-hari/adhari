@@ -1,0 +1,339 @@
+/* Custom CSS untuk Portofolio Adhari dengan Bootstrap 5 */
+
+/* General Body & Font Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: #f8f9fa;
+    /* Warna background lebih cerah */
+    color: #343a40;
+    padding-top: 70px;
+    /* Offset untuk fixed navbar */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #212529;
+    /* Warna teks heading yang lebih gelap */
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #212529 !important;
+    /* Pastikan navbar gelap */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    /* Warna teks brand putih */
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 15px;
+    color: #f8f9fa !important;
+    /* Warna teks link putih */
+}
+
+.nav-link:hover {
+    color: #6ab04c !important;
+    /* Warna hijau limau saat hover */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, .1) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg') no-repeat center center/cover;
+    /* Pastikan nama file background benar */
+    min-height: 85vh;
+    position: relative;
+    padding: 100px 0;
+    display: flex;
+    /* Menggunakan flexbox untuk centering konten */
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.hero-section h1 {
+    font-size: 3.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    /* Warna teks putih untuk judul utama */
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #e0e0e0;
+    /* Warna teks putih keabu-abuan untuk tagline */
+}
+
+.social-icons a {
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    /* Hilangkan underline default */
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: #6ab04c !important;
+    /* Warna hijau limau saat hover */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #34495e;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 60px !important;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #6ab04c;
+    /* Warna hijau limau untuk garis bawah */
+    border-radius: 2px;
+}
+
+/* Gallery Items (Karya Busana & Desain Grafis) */
+.custom-card-img {
+    height: 300px;
+    /* Tinggi gambar konsisten */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item .card-body h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    /* Jarak atas judul card */
+}
+
+/* Experimental Media (Video) */
+/* Bootstrap 5 sudah punya class embed-responsive yang lebih modern untuk video.
+   Saya gunakan .ratio .ratio-16x9 di HTML. CSS ini hanya untuk fallback/tambahan jika perlu. */
+.embed-responsive video {
+    border-radius: 0.25rem;
+    /* Sudut sedikit membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-caption {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.75rem;
+}
+
+/* List Style for Pengalaman */
+.list-unstyled li {
+    margin-bottom: 0.75rem;
+    /* Jarak antar item utama list */
+}
+
+.list-unstyled li h5 {
+    margin-bottom: 0.25rem;
+    color: #495057;
+}
+
+.list-unstyled li p.text-muted {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.list-unstyled li ul {
+    /* Untuk nested list di pengalaman */
+    padding-left: 25px;
+    list-style: disc;
+    /* Mengembalikan bullet point untuk sub-list */
+    margin-top: 0.5rem;
+}
+
+.list-unstyled li ul li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #5a6268;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    /* Warna gelap untuk footer */
+    color: #f8f9fa;
+}
+
+footer .social-icons a {
+    color: #f8f9fa;
+}
+
+footer .social-icons a:hover {
+    color: #6ab04c !important;
+    /* Warna hijau limau saat hover */
+}
+
+/* Modal for Image Display */
+.modal-content {
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Background gelap transparan */
+    color: white;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.modal-body {
+    padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.modal-body img {
+    max-height: 80vh;
+    /* Maksimal tinggi gambar di modal */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    /* Menghilangkan spasi bawah gambar */
+    margin: 0 auto;
+    /* Tengah gambar */
+}
+
+.modal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    /* Membuat ikon close putih */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+
+    /* Untuk tablet dan layar yang lebih kecil dari desktop */
+    .hero-section {
+        min-height: 70vh;
+        padding: 80px 0 50px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .custom-card-img {
+        height: 250px;
+    }
+
+    .modal-body img {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Untuk ponsel dan tablet kecil */
+    body {
+        padding-top: 56px;
+        /* Adjust for smaller fixed navbar height */
+    }
+
+    .hero-section {
+        min-height: 60vh;
+        padding: 60px 0 40px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(33, 37, 41, 0.95);
+        /* Background untuk navbar yang di-collapse */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+    }
+
+    .custom-card-img {
+        height: 300px;
+    }
+
+    .modal-body img {
+        max-height: 60vh;
+    }
+}
